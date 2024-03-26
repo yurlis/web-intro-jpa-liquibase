@@ -1,0 +1,12 @@
+databaseChangelog:
+  - include:
+      file: db/changelog/changes/02-create-departments-table.yaml
+
+  - include:
+      file: db/changelog/changes/03-create-skills-table.yaml
+
+  - include:
+      file: db/changelog/changes/04-create-employee_skills-table.yaml
+
+  - include:
+      file: db/changelog/changes/01-create-employees-table.yaml

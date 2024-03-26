@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-employee-skills-table
+      author: zorro
+      changes:
+        - createTable:
+            tableName: employee_skills
+            columns:
+              - column:
+                  name: employee_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_employee_skills_employee
+                    referencedTableName: employee
+                    referencedColumnNames: id
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: skill_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_employee_skills_skills
+                    referencedTableName: skills
+                    referencedColumnNames: id
+                    nullable: false
+                    primaryKey: true
